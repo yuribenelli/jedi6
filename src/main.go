@@ -45,6 +45,12 @@ func info(s shape) {
 var pippo int
 var f func()
 
+func Ciao() func() int {
+	return func() int {
+		return 42
+	}
+}
+
 func main() {
 
 	//ESERCIZIO 1 (VEDI REPO PER DEF. FUNC)
@@ -96,12 +102,11 @@ func main() {
 	f()
 	g := func(s string) {
 		//DOMANDA: come gestisco il return?
-
 	}
 	g("ciao")
 
 	//ESERCIZIO 8
 
-	t := repo.Ciao()()
+	t := Ciao()()
 	fmt.Println(t)
 }
